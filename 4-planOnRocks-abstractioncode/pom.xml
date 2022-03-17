@@ -7,8 +7,8 @@
         <artifactId>planOnRocks-backend</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com</groupId>
-    <artifactId>planOnRocks-abstractioncode</artifactId>
+
+    <artifactId>4-planOnRocks-abstractioncode</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>4-planOnRocks-abstractioncode</name>
 
@@ -27,14 +27,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

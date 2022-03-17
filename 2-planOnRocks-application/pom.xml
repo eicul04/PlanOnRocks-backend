@@ -8,8 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>com</groupId>
-    <artifactId>planOnRocks-application</artifactId>
+    <artifactId>2-planOnRocks-application</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>2-planOnRocks-application</name>
     <properties>
@@ -18,7 +17,7 @@
     <dependencies>
         <dependency>
             <groupId>com</groupId>
-            <artifactId>planOnRocks-domain</artifactId>
+            <artifactId>3-planOnRocks-domain</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
@@ -33,14 +32,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
