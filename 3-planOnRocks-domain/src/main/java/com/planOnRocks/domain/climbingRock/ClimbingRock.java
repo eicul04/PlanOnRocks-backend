@@ -10,6 +10,9 @@ public class ClimbingRock {
     @Column(name = "location", nullable = false)
     private Location location;
 
+    @Column(name = "name")
+    private String name;
+
     @Column(name = "difficulty")
     private Difficulty difficulty;
 
@@ -17,7 +20,7 @@ public class ClimbingRock {
     private Bolting bolting;
 
     @Embeddable
-    public class Location implements Serializable {
+    public static class Location implements Serializable {
         private final double latitude;
         private final double longitude;
 
@@ -32,11 +35,13 @@ public class ClimbingRock {
         }
     }
 
+    //TODO put something in void constructor
     public ClimbingRock() {
     }
 
-    public ClimbingRock(Location location, Difficulty difficulty, Bolting bolting) {
+    public ClimbingRock(Location location, String name, Difficulty difficulty, Bolting bolting) {
         this.location = location;
+        this.name = name;
         this.difficulty = difficulty;
         this.bolting = bolting;
     }
