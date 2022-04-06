@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ClimbingRockMapper {
 
-    public ClimbingRock mapToEntity(ClimbingRockResource climbingRockResource) {
+    public ClimbingRock mapToClimbingRockEntity(ClimbingRockResource climbingRockResource) {
         Location location = convertToLocation(climbingRockResource.getLocation());
         return new ClimbingRock(location, climbingRockResource.getName(), climbingRockResource.getDifficulty(), climbingRockResource.getBolting());
     }

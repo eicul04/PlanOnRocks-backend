@@ -2,7 +2,6 @@ package com.example.planOnRocks.adapters.climbingRock;
 
 import com.planOnRocks.application.climbingRock.ClimbingRockService;
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -14,7 +13,7 @@ public class ClimbingRockController {
 
     @PostMapping(value = "", produces = "application/json;charset=UTF-8")
     public ClimbingRock createClimbingRock(@RequestBody ClimbingRockResource climbingRockRequest) {
-        return climbingRockService.saveClimbingRock(climbingRockMapper.mapToEntity(climbingRockRequest));
+        return climbingRockService.saveClimbingRock(climbingRockMapper.mapToClimbingRockEntity(climbingRockRequest));
     }
 
 }
