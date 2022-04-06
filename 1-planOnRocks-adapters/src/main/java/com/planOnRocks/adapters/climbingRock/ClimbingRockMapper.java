@@ -1,4 +1,4 @@
-package com.example.planOnRocks.adapters.climbingRock;
+package com.planOnRocks.adapters.climbingRock;
 
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
 import com.planOnRocks.domain.climbingRock.ClimbingRock.Location;

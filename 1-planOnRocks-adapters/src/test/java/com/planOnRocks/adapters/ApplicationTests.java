@@ -1,4 +1,4 @@
-package com.example.planOnRocks.adapters;
+package com.planOnRocks.adapters;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

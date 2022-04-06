@@ -1,11 +1,11 @@
-package com.example.planOnRocks.adapters.climbingRock;
+package com.planOnRocks.adapters.climbingRock;
 
 import com.planOnRocks.application.climbingRock.ClimbingRockService;
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/groups")
+@RequestMapping("/climbingRock")
 public class ClimbingRockController {
 
     private ClimbingRockService climbingRockService;
