@@ -1,7 +1,7 @@
 package com.planOnRocks.adapters.climbingRock;
 
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
-import com.planOnRocks.domain.climbingRock.ClimbingRock.Location;
+import com.planOnRocks.domain.destination.Location;
 import org.springframework.stereotype.Component;
 
 @Component

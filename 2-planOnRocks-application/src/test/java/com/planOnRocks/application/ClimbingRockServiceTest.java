@@ -5,6 +5,7 @@ import com.planOnRocks.domain.climbingRock.Bolting;
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
 import com.planOnRocks.domain.climbingRock.ClimbingRockRepository;
 import com.planOnRocks.domain.climbingRock.Difficulty;
+import com.planOnRocks.domain.destination.Location;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -31,7 +32,7 @@ public class ClimbingRockServiceTest {
 
     @Test
     void saveClimbingRock() {
-        ClimbingRock.Location location = new ClimbingRock.Location(LATITUDE_GAUSBACH, LONGITUDE_GAUSBACH);
+        Location location = new Location(LATITUDE_GAUSBACH, LONGITUDE_GAUSBACH);
         ClimbingRock climbingRockToSave = new ClimbingRock(location, NAME, Difficulty.EASY, Bolting.VERY_GOOD);
         doReturn(climbingRockToSave).when(this.climbingRockRepository).save(climbingRockToSave);
 
