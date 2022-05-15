@@ -1,9 +1,5 @@
 package com.planOnRocks.domain.climbingRock;
 
-enum DistanceUnit {
-    METER, KILOMETER
-}
-
 public final class Distance {
 
     public double getValue() {
