@@ -24,7 +24,7 @@ public class ClimbingRock {
         private final double latitude;
         private final double longitude;
 
-        public Location(long latitude, long longitude) {
+        public Location(double latitude, double longitude) {
             this.latitude = latitude;
             this.longitude = longitude;
         }
