@@ -2,9 +2,9 @@ package com.planOnRocks.application.climbingRock;
 
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
 import com.planOnRocks.domain.climbingRock.ClimbingRockRepository;
-import com.planOnRocks.domain.destination.Location;
-import com.planOnRocks.domain.destination.TripCategorizer;
-import com.planOnRocks.domain.destination.TripCategory;
+import com.planOnRocks.domain.climbingRock.Location;
+import com.planOnRocks.domain.climbingRock.TripCategorizer;
+import com.planOnRocks.domain.climbingRock.TripCategory;
 import org.springframework.stereotype.Service;
 
 @Service

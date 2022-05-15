@@ -1,6 +1,4 @@
-package com.planOnRocks.domain.destination;
-
-import com.planOnRocks.domain.climbingRock.ClimbingRock;
+package com.planOnRocks.domain.climbingRock;
 
 public class TripCategorizer {
 

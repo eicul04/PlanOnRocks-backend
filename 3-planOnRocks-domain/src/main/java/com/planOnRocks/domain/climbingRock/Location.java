@@ -1,4 +1,4 @@
-package com.planOnRocks.domain.destination;
+package com.planOnRocks.domain.climbingRock;
 
 import java.io.Serializable;
 

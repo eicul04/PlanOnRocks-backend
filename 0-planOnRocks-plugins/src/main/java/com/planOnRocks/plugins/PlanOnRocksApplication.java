@@ -8,6 +8,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EntityScan("com.planOnRocks.domain.*")
+@EnableJpaRepositories("com.planOnRocks.plugins*")
+@ComponentScan(basePackages = { "com.planOnRocks.adapters*" })
 public class PlanOnRocksApplication {
 
     public static void main(String[] args) {

@@ -2,8 +2,8 @@ package com.planOnRocks.adapters.climbingRock;
 
 import com.planOnRocks.application.climbingRock.ClimbingRockService;
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
-import com.planOnRocks.domain.destination.Location;
-import com.planOnRocks.domain.destination.TripCategory;
+import com.planOnRocks.domain.climbingRock.Location;
+import com.planOnRocks.domain.climbingRock.TripCategory;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

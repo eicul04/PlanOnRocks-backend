@@ -1,9 +1,6 @@
 package com.planOnRocks.domain.climbingRock;
 
-import com.planOnRocks.domain.destination.Location;
-
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Table(name = "climbing_rock")
 @Entity

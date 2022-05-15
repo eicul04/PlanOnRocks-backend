@@ -1,4 +1,4 @@
-package com.planOnRocks.domain.destination;
+package com.planOnRocks.domain.climbingRock;
 
 enum DistanceUnit {
     METER, KILOMETER
