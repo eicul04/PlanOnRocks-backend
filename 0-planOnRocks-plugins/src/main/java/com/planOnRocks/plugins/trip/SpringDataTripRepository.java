@@ -1,7 +1,7 @@
 package com.planOnRocks.plugins.trip;
 
 import com.planOnRocks.domain.trip.Trip;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface SpringDataTripRepository extends CrudRepository<Trip, Long> {
+public interface SpringDataTripRepository extends JpaRepository<Trip, Long> {
 }

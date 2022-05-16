@@ -1,9 +1,6 @@
 package com.planOnRocks.adapters.trip;
 
-import com.planOnRocks.domain.climbingRock.Bolting;
-import com.planOnRocks.domain.climbingRock.ClimbingRock;
-import com.planOnRocks.domain.climbingRock.Difficulty;
-import com.planOnRocks.domain.climbingRock.TripCategory;
+import com.planOnRocks.domain.climbingRock.*;
 import com.planOnRocks.domain.trip.ParticipantExperience;
 import com.planOnRocks.domain.trip.Trip;
 
@@ -11,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TripMapper {
+
+    private ClimbingRockRepository climbingRockRepository;
 
     public Trip mapToTripEntity(TripDTO tripDTO) {
         List<ClimbingRock> climbingRockList = getClimbingRocksWithTripConditions(tripDTO.getParticipantExperience(), tripDTO.getTripCategory());
@@ -21,7 +20,7 @@ public class TripMapper {
         List<ClimbingRock> filteredClimbingRocks = new ArrayList<>();
         // TODO filter ClimbingRocks in DB
 
-        // ParticipantExperience.BEGINNER => Difficulty.EASY, Bolting.GOOD, Bolting.VERY_GOOD
+
 
         return filteredClimbingRocks;
     }
