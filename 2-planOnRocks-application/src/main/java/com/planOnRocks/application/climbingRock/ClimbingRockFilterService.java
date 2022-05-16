@@ -16,12 +16,12 @@ import java.util.List;
 public class ClimbingRockFilterService implements ClimbingRockFilterDomainService {
 
     private final ClimbingRockRepository climbingRockRepository;
-    private final TripCategorizerService tripCategorizer;
+    private final TripCategorizerService tripCategorizerService;
     @Autowired
     public ClimbingRockFilterService(ClimbingRockRepository climbingRockRepository,
                                      TripCategorizerService tripCategorizer) {
         this.climbingRockRepository = climbingRockRepository;
-        this.tripCategorizer = tripCategorizer;
+        this.tripCategorizerService = tripCategorizer;
     }
 
     public List<ClimbingRock> getClimbingRocksWithTripConditions(ParticipantExperience participantExperience,
@@ -50,7 +50,7 @@ public class ClimbingRockFilterService implements ClimbingRockFilterDomainServic
         List<ClimbingRock> climbingRocksFilteredByTripCategory = new ArrayList<>();
 
         for (ClimbingRock climbingRock : filteredClimbingRocksByParticipantExperience) {
-            if (tripCategorizer.getTripCategory(climbingRock, userLocation) == tripCategory) {
+            if (tripCategorizerService.getTripCategory(climbingRock, userLocation) == tripCategory) {
                 climbingRocksFilteredByTripCategory.add(climbingRock);
             }
         }
