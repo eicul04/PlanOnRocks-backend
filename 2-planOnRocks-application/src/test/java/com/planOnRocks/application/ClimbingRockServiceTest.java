@@ -1,9 +1,9 @@
 package com.planOnRocks.application;
 
 import com.planOnRocks.application.climbingRock.ClimbingRockService;
-import com.planOnRocks.domain.climbingRock.enums.Bolting;
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
 import com.planOnRocks.domain.climbingRock.ClimbingRockRepository;
+import com.planOnRocks.domain.climbingRock.enums.Bolting;
 import com.planOnRocks.domain.climbingRock.enums.Difficulty;
 import com.planOnRocks.domain.climbingRock.valueObjects.Location;
 import org.junit.jupiter.api.Test;
@@ -19,16 +19,13 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 public class ClimbingRockServiceTest {
 
-    @Mock
-    ClimbingRockRepository climbingRockRepository;
-
-    @InjectMocks
-    ClimbingRockService climbingRockService;
-
     private static final String NAME = "Gausbach";
     private static final double LATITUDE_GAUSBACH = 48.68984755044936;
     private static final double LONGITUDE_GAUSBACH = 8.362811253038053;
-
+    @Mock
+    ClimbingRockRepository climbingRockRepository;
+    @InjectMocks
+    ClimbingRockService climbingRockService;
 
     @Test
     void saveClimbingRock() {

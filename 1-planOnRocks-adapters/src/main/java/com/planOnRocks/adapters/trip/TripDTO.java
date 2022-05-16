@@ -13,6 +13,14 @@ public class TripDTO {
     private final LocalDate endDate;
 
 
+    public TripDTO(ParticipantExperience participantExperience, TripCategory tripCategory, LocalDate startDate,
+                   LocalDate endDate) {
+        this.participantExperience = participantExperience;
+        this.tripCategory = tripCategory;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+
     public ParticipantExperience getParticipantExperience() {
         return participantExperience;
     }
@@ -27,13 +35,6 @@ public class TripDTO {
 
     public LocalDate getEndDate() {
         return endDate;
-    }
-
-    public TripDTO(ParticipantExperience participantExperience, TripCategory tripCategory, LocalDate startDate, LocalDate endDate) {
-        this.participantExperience = participantExperience;
-        this.tripCategory = tripCategory;
-        this.startDate = startDate;
-        this.endDate = endDate;
     }
 
 

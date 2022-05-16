@@ -7,9 +7,12 @@ public interface ClimbingRockRepository {
     ClimbingRock save(ClimbingRock climbingRock);
 
     List<ClimbingRock> getClimbingRocksForBeginnerParticipants();
+
     List<ClimbingRock> getClimbingRocksForAdvancedParticipants();
+
     List<ClimbingRock> getClimbingRocksForProfessionalParticipants();
 
     List<ClimbingRock> getClimbingRocks();
+
     ClimbingRock getClimbingRockById(Long climbingRockId);
 }

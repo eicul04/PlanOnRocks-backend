@@ -1,4 +1,5 @@
 package com.planOnRocks.domain.trip;
+
 import com.planOnRocks.domain.climbingRock.enums.TripCategory;
 import com.planOnRocks.domain.trip.enums.ParticipantExperience;
 
@@ -25,7 +26,8 @@ public class Trip {
     @Column(name = "tripCategory")
     private TripCategory tripCategory;
 
-    public Trip(LocalDate startDate, LocalDate endDate, ParticipantExperience participantExperience, TripCategory tripCategory) {
+    public Trip(LocalDate startDate, LocalDate endDate, ParticipantExperience participantExperience,
+                TripCategory tripCategory) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.participantExperience = participantExperience;

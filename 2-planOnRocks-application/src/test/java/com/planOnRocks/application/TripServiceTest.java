@@ -2,9 +2,9 @@ package com.planOnRocks.application;
 
 import com.planOnRocks.application.trip.TripService;
 import com.planOnRocks.domain.climbingRock.enums.TripCategory;
-import com.planOnRocks.domain.trip.enums.ParticipantExperience;
 import com.planOnRocks.domain.trip.Trip;
 import com.planOnRocks.domain.trip.TripRepository;
+import com.planOnRocks.domain.trip.enums.ParticipantExperience;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -20,16 +20,14 @@ import static org.mockito.Mockito.*;
 @ExtendWith(MockitoExtension.class)
 public class TripServiceTest {
 
-    @Mock
-    TripRepository tripRepository;
-
-    @InjectMocks
-    TripService tripService;
-
     private static final ParticipantExperience PARTICIPANT_EXPERIENCE = ParticipantExperience.BEGINNER;
     private final TripCategory TRIP_CATEGORY = TripCategory.DAY_TRIP;
     private final LocalDate START_DATE = LocalDate.now();
     private final LocalDate END_DATE = LocalDate.now();
+    @Mock
+    TripRepository tripRepository;
+    @InjectMocks
+    TripService tripService;
 
     @Test
     void saveTrip() {

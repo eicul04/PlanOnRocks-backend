@@ -2,7 +2,8 @@ package com.planOnRocks.plugins.trip.rest;
 
 import com.planOnRocks.adapters.climbingRock.LocationMapper;
 import com.planOnRocks.adapters.trip.TripDTO;
-import com.planOnRocks.adapters.trip.TripMapper;
+import com.planOnRocks.adapters.trip.TripDTOToTripMapper;
+import com.planOnRocks.adapters.trip.TripToTripDTOMapper;
 import com.planOnRocks.application.trip.TripService;
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
 import com.planOnRocks.domain.trip.Trip;
@@ -17,23 +18,28 @@ import java.util.List;
 public class TripController {
 
     private final TripService tripService;
-    private final TripMapper tripMapper;
+    private final TripDTOToTripMapper tripDTOToTripMapper;
+    private final TripToTripDTOMapper tripToTripDTOMapper;
     private final LocationMapper locationMapper;
 
     @Autowired
-    public TripController(TripService tripService, TripMapper tripMapper, LocationMapper locationMapper) {
+    public TripController(TripService tripService, TripDTOToTripMapper tripMapper,
+                          TripToTripDTOMapper tripToTripDTOMapper,
+                          LocationMapper locationMapper) {
         this.tripService = tripService;
-        this.tripMapper = tripMapper;
+        this.tripDTOToTripMapper = tripMapper;
+        this.tripToTripDTOMapper = tripToTripDTOMapper;
         this.locationMapper = locationMapper;
     }
 
     @PostMapping(value = "", produces = "application/json;charset=UTF-8")
-    public Trip createTrip(@RequestBody TripDTO tripRequest) {
-        return tripService.createTrip(tripMapper.apply(tripRequest));
+    public TripDTO createTrip(@RequestBody TripDTO tripRequest) {
+        return tripToTripDTOMapper.apply(tripService.createTrip(tripDTOToTripMapper.apply(tripRequest)));
     }
 
     @GetMapping(value = "/", params = {"climbingRock", "userLocation"}, produces = "application/json;charset=UTF-8")
-    public List<ClimbingRock> getTripDestinations(@RequestParam Long climbingRockId, @RequestParam String userLocation) {
+    public List<ClimbingRock> getTripDestinations(@RequestParam Long climbingRockId,
+                                                  @RequestParam String userLocation) {
         return tripService.getTripDestinations(climbingRockId, locationMapper.apply(userLocation));
     }
 

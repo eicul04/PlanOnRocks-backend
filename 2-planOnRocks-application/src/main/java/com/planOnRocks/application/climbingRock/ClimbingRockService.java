@@ -2,8 +2,8 @@ package com.planOnRocks.application.climbingRock;
 
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
 import com.planOnRocks.domain.climbingRock.ClimbingRockRepository;
-import com.planOnRocks.domain.climbingRock.valueObjects.Location;
 import com.planOnRocks.domain.climbingRock.enums.TripCategory;
+import com.planOnRocks.domain.climbingRock.valueObjects.Location;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -21,7 +21,8 @@ public class TripService {
     private final WeatherService weatherService;
 
     @Autowired
-    public TripService(TripRepository tripRepository, ClimbingRockFilterService climbingRockFilterService, ClimbingRockService climbingRockService, WeatherService weatherService) {
+    public TripService(TripRepository tripRepository, ClimbingRockFilterService climbingRockFilterService,
+                       ClimbingRockService climbingRockService, WeatherService weatherService) {
         this.tripRepository = tripRepository;
         this.climbingRockFilterService = climbingRockFilterService;
         this.climbingRockService = climbingRockService;

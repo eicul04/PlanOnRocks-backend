@@ -1,7 +1,7 @@
 package com.planOnRocks.plugins.climbingRock.rest;
 
-import com.planOnRocks.adapters.climbingRock.ClimbingRockMapper;
 import com.planOnRocks.adapters.climbingRock.ClimbingRockDTO;
+import com.planOnRocks.adapters.climbingRock.ClimbingRockMapper;
 import com.planOnRocks.adapters.climbingRock.LocationMapper;
 import com.planOnRocks.application.climbingRock.ClimbingRockService;
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
@@ -18,7 +18,8 @@ public class ClimbingRockController {
     private final LocationMapper locationMapper;
 
     @Autowired
-    public ClimbingRockController(ClimbingRockService climbingRockService, ClimbingRockMapper climbingRockMapper, LocationMapper locationMapper) {
+    public ClimbingRockController(ClimbingRockService climbingRockService, ClimbingRockMapper climbingRockMapper,
+                                  LocationMapper locationMapper) {
         this.climbingRockService = climbingRockService;
         this.climbingRockMapper = climbingRockMapper;
         this.locationMapper = locationMapper;

@@ -1,7 +1,5 @@
 package com.planOnRocks.domain.climbingRock.valueObjects;
 
-import com.planOnRocks.domain.climbingRock.valueObjects.Location;
-
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 

@@ -1,6 +1,6 @@
 package com.planOnRocks.application.climbingRock;
 
-import com.planOnRocks.domain.climbingRock.*;
+import com.planOnRocks.domain.climbingRock.ClimbingRock;
 import com.planOnRocks.domain.climbingRock.domainServices.TripCategorizerDomainService;
 import com.planOnRocks.domain.climbingRock.enums.TripCategory;
 import com.planOnRocks.domain.climbingRock.valueObjects.Distance;
@@ -25,13 +25,13 @@ public class TripCategorizerService implements TripCategorizerDomainService {
     }
 
     private TripCategory categorizeClimbingRock(Distance distance) {
-        if(distance.getValue() < 50) {
+        if (distance.getValue() < 50) {
             return TripCategory.HALF_DAY_TRIP;
         }
-        if(distance.getValue() < 140) {
+        if (distance.getValue() < 140) {
             return TripCategory.DAY_TRIP;
         }
-        if(distance.getValue() < 250) {
+        if (distance.getValue() < 250) {
             return TripCategory.WEEKEND_TRIP;
         }
         return TripCategory.VACATION;
