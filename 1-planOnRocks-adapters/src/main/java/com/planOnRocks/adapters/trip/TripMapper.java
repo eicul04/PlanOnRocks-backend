@@ -1,27 +1,19 @@
 package com.planOnRocks.adapters.trip;
 
-import com.planOnRocks.domain.climbingRock.*;
-import com.planOnRocks.domain.trip.ParticipantExperience;
 import com.planOnRocks.domain.trip.Trip;
+import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.function.Function;
 
-public class TripMapper {
-
-    private ClimbingRockRepository climbingRockRepository;
+@Component
+public class TripMapper implements Function<TripDTO, Trip> {
 
     public Trip mapToTripEntity(TripDTO tripDTO) {
-        List<ClimbingRock> climbingRockList = getClimbingRocksWithTripConditions(tripDTO.getParticipantExperience(), tripDTO.getTripCategory());
-        return new Trip(tripDTO.getStartDate(), tripDTO.getEndDate(), tripDTO.getParticipantExperience(), tripDTO.getTripCategory(), climbingRockList);
+        return new Trip(tripDTO.getStartDate(), tripDTO.getEndDate(), tripDTO.getParticipantExperience(), tripDTO.getTripCategory());
     }
 
-    private List<ClimbingRock> getClimbingRocksWithTripConditions(ParticipantExperience participantExperience, TripCategory tripCategory){
-        List<ClimbingRock> filteredClimbingRocks = new ArrayList<>();
-        // TODO filter ClimbingRocks in DB
-
-
-
-        return filteredClimbingRocks;
+    @Override
+    public Trip apply(TripDTO tripDTO) {
+        return this.mapToTripEntity(tripDTO);
     }
 }

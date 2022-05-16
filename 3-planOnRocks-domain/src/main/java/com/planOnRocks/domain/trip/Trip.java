@@ -44,11 +44,34 @@ public class Trip {
         this.climbingRocks = climbingRocks;
     }
 
+    public Trip(Date startDate, Date endDate, ParticipantExperience participantExperience, TripCategory tripCategory) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.participantExperience = participantExperience;
+        this.tripCategory = tripCategory;
+    }
+
     public Trip() {
 
     }
 
     public List<ClimbingRock> getClimbingRocks() {
         return climbingRocks;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public ParticipantExperience getParticipantExperience() {
+        return participantExperience;
+    }
+
+    public TripCategory getTripCategory() {
+        return tripCategory;
     }
 }

@@ -1,5 +1,6 @@
 package com.planOnRocks.adapters.trip;
 
+import com.planOnRocks.domain.climbingRock.Location;
 import com.planOnRocks.domain.climbingRock.TripCategory;
 import com.planOnRocks.domain.trip.ParticipantExperience;
 
@@ -7,10 +8,11 @@ import java.util.Date;
 
 public class TripDTO {
 
-    private ParticipantExperience participantExperience;
-    private TripCategory tripCategory;
-    private Date startDate;
-    private Date endDate;
+    private final ParticipantExperience participantExperience;
+    private final TripCategory tripCategory;
+    private final Date startDate;
+    private final Date endDate;
+
 
     public ParticipantExperience getParticipantExperience() {
         return participantExperience;
