@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import java.util.function.Function;
 
 @Component
-public class LocationMapper implements Function<String, Location> {
+public class StringToLocationMapper implements Function<String, Location> {
 
     private Location mapToLocation(String location) {
         String[] latlong = location.split(",");
