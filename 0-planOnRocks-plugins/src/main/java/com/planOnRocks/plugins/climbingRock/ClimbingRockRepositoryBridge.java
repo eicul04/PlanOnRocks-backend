@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class ClimbingRockRepositoryBridge implements ClimbingRockRepository {
 
-    private SpringDataClimbingRockRepository springDataClimbingRockRepository;
+    private final SpringDataClimbingRockRepository springDataClimbingRockRepository;
 
     @Autowired
     public ClimbingRockRepositoryBridge(SpringDataClimbingRockRepository springDataClimbingRockRepository) {
