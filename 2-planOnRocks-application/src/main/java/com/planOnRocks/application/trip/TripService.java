@@ -22,13 +22,17 @@ public class TripService {
         this.climbingRockFilterService = climbingRockFilterService;
     }
 
-    public List<ClimbingRock> createTrip(Trip trip, Location userLocation) {
-        Trip savedTrip = tripRepository.save(getTripWithClimbingRockList(trip, userLocation));
-        return savedTrip.getClimbingRocks();
+    public Trip createTrip(Trip trip) {
+        return tripRepository.save(trip);
     }
 
-    private Trip getTripWithClimbingRockList(Trip trip, Location userLocation){
-        List<ClimbingRock> climbingRocks = climbingRockFilterService.getClimbingRocksWithTripConditions(trip.getParticipantExperience(), trip.getTripCategory(), userLocation);
-        return new Trip(trip.getStartDate(), trip.getEndDate(), trip.getParticipantExperience(), trip.getTripCategory(), climbingRocks);
+    public List<ClimbingRock> getTripDestinations(Long tripId, Location userLocation) {
+        Trip trip = getTripById(tripId);
+        return climbingRockFilterService.getClimbingRocksWithTripConditions(trip.getParticipantExperience(), trip.getTripCategory(), userLocation);
+    }
+
+    private Trip getTripById(Long tripId) {
+        return tripRepository.getTripById(tripId);
     }
 }
+

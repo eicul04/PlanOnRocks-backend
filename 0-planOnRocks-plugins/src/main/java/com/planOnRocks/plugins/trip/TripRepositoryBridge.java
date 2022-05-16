@@ -20,4 +20,9 @@ public class TripRepositoryBridge implements TripRepository {
     public Trip save(Trip trip) {
         return this.springDataTripRepository.save(trip);
     }
+
+    @Override
+    public Trip getTripById(Long tripId) {
+        return springDataTripRepository.getById(tripId);
+    }
 }
