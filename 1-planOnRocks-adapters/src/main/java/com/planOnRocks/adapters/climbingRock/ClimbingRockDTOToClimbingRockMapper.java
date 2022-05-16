@@ -7,12 +7,12 @@ import org.springframework.stereotype.Component;
 import java.util.function.Function;
 
 @Component
-public class ClimbingRockMapper implements Function<ClimbingRockDTO, ClimbingRock> {
+public class ClimbingRockDTOToClimbingRockMapper implements Function<ClimbingRockDTO, ClimbingRock> {
 
-    private final LocationMapper locationMapper;
+    private final StringToLocationMapper locationMapper;
 
     @Autowired
-    public ClimbingRockMapper(LocationMapper locationMapper) {
+    public ClimbingRockDTOToClimbingRockMapper(StringToLocationMapper locationMapper) {
         this.locationMapper = locationMapper;
     }
 
