@@ -1,7 +1,4 @@
 package com.planOnRocks.domain.trip;
-
-import com.planOnRocks.domain.climbingRock.ClimbingRock;
-import com.planOnRocks.domain.climbingRock.Difficulty;
 import com.planOnRocks.domain.climbingRock.TripCategory;
 
 import javax.persistence.*;
@@ -29,21 +26,6 @@ public class Trip {
     @Column(name = "tripCategory")
     private TripCategory tripCategory;
 
-    @ManyToMany(cascade = {CascadeType.ALL})
-    @JoinTable(
-            name = "trip_climbingRock",
-            joinColumns = @JoinColumn(name = "trip_id"),
-            inverseJoinColumns = @JoinColumn(name = "climbing_rock_id"))
-    private List<ClimbingRock> climbingRocks = new ArrayList<>();
-
-    public Trip(Date startDate, Date endDate, ParticipantExperience participantExperience, TripCategory tripCategory, List<ClimbingRock> climbingRocks) {
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.participantExperience = participantExperience;
-        this.tripCategory = tripCategory;
-        this.climbingRocks = climbingRocks;
-    }
-
     public Trip(Date startDate, Date endDate, ParticipantExperience participantExperience, TripCategory tripCategory) {
         this.startDate = startDate;
         this.endDate = endDate;
@@ -53,10 +35,6 @@ public class Trip {
 
     public Trip() {
 
-    }
-
-    public List<ClimbingRock> getClimbingRocks() {
-        return climbingRocks;
     }
 
     public Date getStartDate() {

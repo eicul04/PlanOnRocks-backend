@@ -30,9 +30,6 @@ public class ClimbingRock {
     @Column(name = "bolting")
     private Bolting bolting;
 
-    @ManyToMany(mappedBy = "climbingRocks", cascade = {CascadeType.ALL})
-    private List<Trip> trips = new ArrayList<>();
-
     //TODO put something in void constructor
     public ClimbingRock() {
     }
