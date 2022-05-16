@@ -2,20 +2,27 @@ package com.planOnRocks.adapters.climbingRock;
 
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
 import com.planOnRocks.domain.climbingRock.Location;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
-public class ClimbingRockMapper {
+import java.util.function.Function;
 
-    public ClimbingRock mapToClimbingRockEntity(ClimbingRockDTO climbingRockDTO) {
-        Location location = convertToLocation(climbingRockDTO.getLocation());
-        return new ClimbingRock(location, climbingRockDTO.getName(), climbingRockDTO.getDifficulty(), climbingRockDTO.getBolting());
+@Component
+public class ClimbingRockMapper implements Function<ClimbingRockDTO, ClimbingRock> {
+
+    private final LocationMapper locationMapper;
+
+    @Autowired
+    public ClimbingRockMapper(LocationMapper locationMapper) {
+        this.locationMapper = locationMapper;
     }
 
-    private Location convertToLocation(String location) {
-        String[] latlong = location.split(",");
-        long latitude = Long.parseLong(latlong[0]);
-        long longitude = Long.parseLong(latlong[1]);
-        return new Location(latitude, longitude);
+    public ClimbingRock mapToClimbingRockEntity(ClimbingRockDTO climbingRockDTO) {
+        return new ClimbingRock(locationMapper.apply(climbingRockDTO.getLocation()), climbingRockDTO.getName(), climbingRockDTO.getDifficulty(), climbingRockDTO.getBolting());
+    }
+
+    @Override
+    public ClimbingRock apply(ClimbingRockDTO climbingRockDTO) {
+        return this.mapToClimbingRockEntity(climbingRockDTO);
     }
 }
