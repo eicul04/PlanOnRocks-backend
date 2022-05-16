@@ -14,13 +14,13 @@ public class TripCategorizerService implements TripCategorizerDomainService {
 
     private final DistanceCalculatorService distanceCalculator;
 
-    public TripCategory categorizeClimbingRock(ClimbingRock climbingRock, Location userLocation) {
+    public TripCategory getTripCategory(ClimbingRock climbingRock, Location userLocation) {
         Location climbingRockLocation = climbingRock.getClimbingRockLocation();
         Distance distance = distanceCalculator.getDistance(climbingRockLocation, userLocation);
-        return getTripCategory(distance);
+        return categorizeClimbingRock(distance);
     }
 
-    public TripCategory getTripCategory(Distance distance) {
+    public TripCategory categorizeClimbingRock(Distance distance) {
         if(distance.getValue() < 50) {
             return TripCategory.HALF_DAY_TRIP;
         }

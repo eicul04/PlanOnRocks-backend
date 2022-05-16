@@ -31,7 +31,7 @@ public class TripCategorizerServiceTest {
     @Test
     void categorizeClimbingRock(){
         when(distanceCalculator.getDistance(CLIMBING_ROCK_LOCATION, USER_LOCATION)).thenReturn(new Distance(35, DistanceUnit.KILOMETER));
-        TripCategory tripCategory = tripCategorizerService.categorizeClimbingRock(CLIMBING_ROCK, USER_LOCATION);
+        TripCategory tripCategory = tripCategorizerService.getTripCategory(CLIMBING_ROCK, USER_LOCATION);
         assertEquals(TripCategory.HALF_DAY_TRIP, tripCategory);
     }
 }

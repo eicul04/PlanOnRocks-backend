@@ -28,6 +28,6 @@ public class TripController {
 
     @PostMapping(value = "", produces = "application/json;charset=UTF-8")
     public List<ClimbingRock> createTrip(@RequestBody TripDTO tripRequest) {
-        return tripService.createTrip(tripMapper.mapToTripEntity(tripRequest));
+        return tripService.createTrip(tripMapper.apply(tripRequest));
     }
 }
