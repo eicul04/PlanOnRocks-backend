@@ -3,14 +3,14 @@ package com.planOnRocks.adapters.climbingRock;
 import com.planOnRocks.domain.climbingRock.Bolting;
 import com.planOnRocks.domain.climbingRock.Difficulty;
 
-public class ClimbingRockResource {
+public class ClimbingRockDTO {
 
     private String location;
     private String name;
     private Difficulty difficulty;
     private Bolting bolting;
 
-    public ClimbingRockResource(String location, String name, Difficulty difficulty, Bolting bolting) {
+    public ClimbingRockDTO(String location, String name, Difficulty difficulty, Bolting bolting) {
         this.location = location;
         this.name = name;
         this.difficulty = difficulty;
