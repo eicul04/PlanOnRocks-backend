@@ -1,7 +1,6 @@
 package com.planOnRocks.application;
 
 import com.planOnRocks.application.climbingRock.DistanceCalculatorService;
-import com.planOnRocks.domain.climbingRock.enums.DistanceUnit;
 import com.planOnRocks.domain.climbingRock.valueObjects.Distance;
 import com.planOnRocks.domain.climbingRock.valueObjects.Location;
 import org.junit.jupiter.api.Test;

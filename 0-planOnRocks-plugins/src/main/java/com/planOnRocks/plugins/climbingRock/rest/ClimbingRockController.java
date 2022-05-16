@@ -36,7 +36,7 @@ public class ClimbingRockController {
                 climbingRockDTOToClimbingRockMapper.apply(climbingRockRequest)));
     }
 
-    @GetMapping(value = "/", params = {"climbingRock", "userLocation"}, produces = "application/json;charset=UTF-8")
+    @GetMapping(value = "", params = {"climbingRock", "userLocation"}, produces = "application/json;charset=UTF-8")
     public TripCategory categorizeClimbingRock(@RequestParam Long climbingRockId, @RequestParam String userLocation) {
         return climbingRockService.categorizeClimbingRock(climbingRockId, stringToLocationMapper.apply(userLocation));
     }

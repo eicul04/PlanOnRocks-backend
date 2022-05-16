@@ -12,6 +12,7 @@ import com.planOnRocks.domain.trip.Trip;
 import com.planOnRocks.domain.trip.TripRepository;
 import com.planOnRocks.domain.trip.enums.ParticipantExperience;
 import com.planOnRocks.domain.trip.enums.Weather;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -46,10 +47,15 @@ public class TripServiceTest {
     @InjectMocks
     TripService tripService;
 
+    private Trip tripMock;
+
+    @BeforeEach
+    void init() {
+        this.tripMock = new Trip(START_DATE, END_DATE, PARTICIPANT_EXPERIENCE, TRIP_CATEGORY);
+    }
+
     @Test
     void createTrip() {
-        Trip tripMock = new Trip(START_DATE, END_DATE, PARTICIPANT_EXPERIENCE, TRIP_CATEGORY);
-
         doReturn(tripMock).when(tripRepository).save(tripMock);
         Trip savedTrip = tripService.createTrip(tripMock);
 
@@ -60,8 +66,6 @@ public class TripServiceTest {
     @Test
     void getWeather() {
         ClimbingRock climbingRockMock = new ClimbingRock(LOCATION, NAME, Difficulty.EASY, Bolting.VERY_GOOD);
-        Trip tripMock = new Trip(START_DATE, END_DATE, PARTICIPANT_EXPERIENCE, TRIP_CATEGORY);
-
         doReturn(climbingRockMock).when(climbingRockService).getClimbingRockById(CLIMBING_ROCK_ID);
         doReturn(tripMock).when(tripRepository).getTripById(TRIP_ID);
         doReturn(Weather.SUN).when(weatherService).getWeather(tripMock.getStartDate(), climbingRockMock.getClimbingRockLocation());
