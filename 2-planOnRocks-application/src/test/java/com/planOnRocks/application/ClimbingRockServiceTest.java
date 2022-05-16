@@ -34,10 +34,10 @@ public class ClimbingRockServiceTest {
     void saveClimbingRock() {
         Location location = new Location(LATITUDE_GAUSBACH, LONGITUDE_GAUSBACH);
         ClimbingRock climbingRockToSave = new ClimbingRock(location, NAME, Difficulty.EASY, Bolting.VERY_GOOD);
-        doReturn(climbingRockToSave).when(this.climbingRockRepository).save(climbingRockToSave);
 
         ClimbingRock savedClimbingRock = this.climbingRockService.saveClimbingRock(climbingRockToSave);
 
+        doReturn(climbingRockToSave).when(this.climbingRockRepository).save(climbingRockToSave);
         verify(this.climbingRockRepository, times(1)).save(any(ClimbingRock.class));
         assertEquals(climbingRockToSave, savedClimbingRock);
     }
