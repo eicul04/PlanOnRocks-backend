@@ -22,6 +22,7 @@ public class ClimbingRockServiceTest {
     private static final String NAME = "Gausbach";
     private static final double LATITUDE_GAUSBACH = 48.68984755044936;
     private static final double LONGITUDE_GAUSBACH = 8.362811253038053;
+    private static final Location LOCATION = new Location(LATITUDE_GAUSBACH, LONGITUDE_GAUSBACH);
     @Mock
     ClimbingRockRepository climbingRockRepository;
     @InjectMocks
@@ -29,14 +30,13 @@ public class ClimbingRockServiceTest {
 
     @Test
     void saveClimbingRock() {
-        Location location = new Location(LATITUDE_GAUSBACH, LONGITUDE_GAUSBACH);
-        ClimbingRock climbingRockToSave = new ClimbingRock(location, NAME, Difficulty.EASY, Bolting.VERY_GOOD);
-        doReturn(climbingRockToSave).when(this.climbingRockRepository).save(climbingRockToSave);
+        ClimbingRock climbingRockMock = new ClimbingRock(LOCATION, NAME, Difficulty.EASY, Bolting.VERY_GOOD);
+        doReturn(climbingRockMock).when(this.climbingRockRepository).save(climbingRockMock);
 
-        ClimbingRock savedClimbingRock = this.climbingRockService.saveClimbingRock(climbingRockToSave);
+        ClimbingRock savedClimbingRock = this.climbingRockService.saveClimbingRock(climbingRockMock);
 
         verify(this.climbingRockRepository, times(1)).save(any(ClimbingRock.class));
-        assertEquals(climbingRockToSave, savedClimbingRock);
+        assertEquals(climbingRockMock, savedClimbingRock);
     }
 
 }

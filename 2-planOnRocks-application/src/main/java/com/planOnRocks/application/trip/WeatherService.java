@@ -24,7 +24,7 @@ public class WeatherService implements WeatherDomainService {
 
     public Weather getWeather(LocalDate tripStart, Location climbingRockLocation) {
         if (checkIfLessThanEightDays(tripStart)) {
-            weatherAPI.getWeatherForDateAndLocation(tripStart, climbingRockLocation);
+            return weatherAPI.getWeatherForDateAndLocation(tripStart, climbingRockLocation);
         }
         return Weather.NO_FORECAST;
     }
