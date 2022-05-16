@@ -29,11 +29,11 @@ public class Trip {
     @Column(name = "tripCategory")
     private TripCategory tripCategory;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST})
+    @ManyToMany(cascade = {CascadeType.ALL})
     @JoinTable(
             name = "trip_climbingRock",
             joinColumns = @JoinColumn(name = "trip_id"),
-            inverseJoinColumns = @JoinColumn(name = "location"))
+            inverseJoinColumns = @JoinColumn(name = "climbing_rock_id"))
     private List<ClimbingRock> climbingRocks = new ArrayList<>();
 
     public Long getId() {

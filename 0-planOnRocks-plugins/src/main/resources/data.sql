@@ -1,4 +1,4 @@
-DROP TABLE climbing_rock;
+DROP TABLE climbing_rock if exists cascade;
 
 CREATE TABLE climbing_rock
 (

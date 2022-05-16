@@ -11,6 +11,10 @@ import java.util.List;
 public class ClimbingRock {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "climbing_rock_id", nullable = false)
+    private Long id;
+
     @Convert(
             converter = LocationConverter.class
     )
@@ -26,7 +30,7 @@ public class ClimbingRock {
     @Column(name = "bolting")
     private Bolting bolting;
 
-    @ManyToMany(mappedBy = "climbingRocks", cascade = {CascadeType.PERSIST})
+    @ManyToMany(mappedBy = "climbingRocks", cascade = {CascadeType.ALL})
     private List<Trip> trips = new ArrayList<>();
 
     //TODO put something in void constructor
