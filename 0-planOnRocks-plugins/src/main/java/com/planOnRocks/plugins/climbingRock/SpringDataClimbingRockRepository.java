@@ -16,4 +16,6 @@ public interface SpringDataClimbingRockRepository extends JpaRepository<Climbing
 
     @Query(value = "SELECT * FROM CLIMBING_ROCK where DIFFICULTY = 'EASY' OR DIFFICULTY = 'MEDIUM' OR DIFFICULTY = 'HARD' AND BOLTING = 'BAD' OR BOLTING = 'OK' OR BOLTING = 'GOOD' OR BOLTING = 'VERY_GOOD'", nativeQuery = true)
     List<ClimbingRock> getClimbingRocksForProfessionalParticipants();
+
+    List<ClimbingRock> findAll();
 }

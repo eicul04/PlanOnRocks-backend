@@ -36,4 +36,14 @@ public class ClimbingRockRepositoryBridge implements ClimbingRockRepository {
     public List<ClimbingRock> getClimbingRocksForProfessionalParticipants() {
         return this.springDataClimbingRockRepository.getClimbingRocksForProfessionalParticipants();
     }
+
+    @Override
+    public List<ClimbingRock> getClimbingRocks() {
+        return this.springDataClimbingRockRepository.findAll();
+    }
+
+    @Override
+    public ClimbingRock getClimbingRockById(Long climbingRockId) {
+        return this.springDataClimbingRockRepository.getById(climbingRockId);
+    }
 }

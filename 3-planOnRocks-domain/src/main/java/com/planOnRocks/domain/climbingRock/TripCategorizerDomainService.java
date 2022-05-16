@@ -2,6 +2,6 @@ package com.planOnRocks.domain.climbingRock;
 
 public interface TripCategorizerDomainService {
 
-    TripCategory categorizeClimbingRock(ClimbingRock climbingRock, Location userLocation);
-    TripCategory getTripCategory(Distance distance);
+    TripCategory getTripCategory(ClimbingRock climbingRock, Location userLocation);
+    TripCategory categorizeClimbingRock(Distance distance);
 }

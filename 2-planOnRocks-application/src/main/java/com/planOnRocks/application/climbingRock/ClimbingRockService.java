@@ -4,8 +4,12 @@ import com.planOnRocks.domain.climbingRock.ClimbingRock;
 import com.planOnRocks.domain.climbingRock.ClimbingRockRepository;
 import com.planOnRocks.domain.climbingRock.Location;
 import com.planOnRocks.domain.climbingRock.TripCategory;
+import com.planOnRocks.domain.trip.ParticipantExperience;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class ClimbingRockService {
@@ -24,7 +28,11 @@ public class ClimbingRockService {
         return climbingRockRepository.save(climbingRock);
     }
 
-    public TripCategory categorizeClimbingRock(ClimbingRock climbingRock, Location userLocation) {
-        return tripCategorizer.categorizeClimbingRock(climbingRock, userLocation);
+    public TripCategory categorizeClimbingRock(Long climbingRockId, Location userLocation) {
+        return tripCategorizer.getTripCategory(getClimbingRockById(climbingRockId), userLocation);
+    }
+
+    public ClimbingRock getClimbingRockById(Long climbingRockId) {
+        return climbingRockRepository.getClimbingRockById(climbingRockId);
     }
 }
