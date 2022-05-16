@@ -2,7 +2,9 @@ package com.planOnRocks.application.climbingRock;
 
 import com.planOnRocks.domain.climbingRock.*;
 import com.planOnRocks.domain.climbingRock.domainServices.ClimbingRockFilterDomainService;
-import com.planOnRocks.domain.trip.ParticipantExperience;
+import com.planOnRocks.domain.climbingRock.enums.TripCategory;
+import com.planOnRocks.domain.climbingRock.valueObjects.Location;
+import com.planOnRocks.domain.trip.enums.ParticipantExperience;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

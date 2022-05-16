@@ -1,11 +1,9 @@
 package com.planOnRocks.adapters.trip;
 
-import com.planOnRocks.domain.climbingRock.Location;
-import com.planOnRocks.domain.climbingRock.TripCategory;
-import com.planOnRocks.domain.trip.ParticipantExperience;
+import com.planOnRocks.domain.climbingRock.enums.TripCategory;
+import com.planOnRocks.domain.trip.enums.ParticipantExperience;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class TripDTO {
 

@@ -1,14 +1,12 @@
-package com.planOnRocks.plugins.trip;
+package com.planOnRocks.plugins.trip.rest;
 
-import com.planOnRocks.adapters.climbingRock.ClimbingRockDTO;
 import com.planOnRocks.adapters.climbingRock.LocationMapper;
 import com.planOnRocks.adapters.trip.TripDTO;
 import com.planOnRocks.adapters.trip.TripMapper;
 import com.planOnRocks.application.trip.TripService;
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
-import com.planOnRocks.domain.climbingRock.TripCategory;
 import com.planOnRocks.domain.trip.Trip;
-import com.planOnRocks.domain.trip.Weather;
+import com.planOnRocks.domain.trip.enums.Weather;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

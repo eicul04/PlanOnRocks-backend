@@ -3,14 +3,13 @@ package com.planOnRocks.application.trip;
 import com.planOnRocks.application.climbingRock.ClimbingRockFilterService;
 import com.planOnRocks.application.climbingRock.ClimbingRockService;
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
-import com.planOnRocks.domain.climbingRock.Location;
+import com.planOnRocks.domain.climbingRock.valueObjects.Location;
 import com.planOnRocks.domain.trip.Trip;
 import com.planOnRocks.domain.trip.TripRepository;
-import com.planOnRocks.domain.trip.Weather;
+import com.planOnRocks.domain.trip.enums.Weather;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @Service

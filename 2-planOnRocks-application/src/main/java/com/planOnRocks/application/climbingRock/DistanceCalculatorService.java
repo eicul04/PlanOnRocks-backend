@@ -1,9 +1,9 @@
 package com.planOnRocks.application.climbingRock;
 
-import com.planOnRocks.domain.climbingRock.Distance;
-import com.planOnRocks.domain.climbingRock.DistanceCalculatorDomainService;
-import com.planOnRocks.domain.climbingRock.DistanceUnit;
-import com.planOnRocks.domain.climbingRock.Location;
+import com.planOnRocks.domain.climbingRock.valueObjects.Distance;
+import com.planOnRocks.domain.climbingRock.domainServices.DistanceCalculatorDomainService;
+import com.planOnRocks.domain.climbingRock.enums.DistanceUnit;
+import com.planOnRocks.domain.climbingRock.valueObjects.Location;
 import org.springframework.stereotype.Service;
 
 import static java.lang.Math.*;

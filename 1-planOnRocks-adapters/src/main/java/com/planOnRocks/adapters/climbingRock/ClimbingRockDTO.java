@@ -1,7 +1,7 @@
 package com.planOnRocks.adapters.climbingRock;
 
-import com.planOnRocks.domain.climbingRock.Bolting;
-import com.planOnRocks.domain.climbingRock.Difficulty;
+import com.planOnRocks.domain.climbingRock.enums.Bolting;
+import com.planOnRocks.domain.climbingRock.enums.Difficulty;
 
 public class ClimbingRockDTO {
 

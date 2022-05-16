@@ -1,9 +1,9 @@
 package com.planOnRocks.application.trip;
 
-import com.planOnRocks.domain.climbingRock.Location;
-import com.planOnRocks.domain.trip.Weather;
+import com.planOnRocks.domain.climbingRock.valueObjects.Location;
+import com.planOnRocks.domain.trip.enums.Weather;
 import com.planOnRocks.domain.trip.WeatherAPI;
-import com.planOnRocks.domain.trip.WeatherDomainService;
+import com.planOnRocks.domain.trip.domainServices.WeatherDomainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

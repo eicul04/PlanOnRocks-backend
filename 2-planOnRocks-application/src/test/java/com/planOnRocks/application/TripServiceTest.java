@@ -1,8 +1,8 @@
 package com.planOnRocks.application;
 
 import com.planOnRocks.application.trip.TripService;
-import com.planOnRocks.domain.climbingRock.*;
-import com.planOnRocks.domain.trip.ParticipantExperience;
+import com.planOnRocks.domain.climbingRock.enums.TripCategory;
+import com.planOnRocks.domain.trip.enums.ParticipantExperience;
 import com.planOnRocks.domain.trip.Trip;
 import com.planOnRocks.domain.trip.TripRepository;
 import org.junit.jupiter.api.Test;

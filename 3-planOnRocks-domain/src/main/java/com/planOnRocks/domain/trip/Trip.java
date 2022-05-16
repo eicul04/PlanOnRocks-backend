@@ -1,11 +1,9 @@
 package com.planOnRocks.domain.trip;
-import com.planOnRocks.domain.climbingRock.TripCategory;
+import com.planOnRocks.domain.climbingRock.enums.TripCategory;
+import com.planOnRocks.domain.trip.enums.ParticipantExperience;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 @Table(name = "trip")
 @Entity

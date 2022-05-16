@@ -1,6 +1,10 @@
 package com.planOnRocks.application.climbingRock;
 
 import com.planOnRocks.domain.climbingRock.*;
+import com.planOnRocks.domain.climbingRock.domainServices.TripCategorizerDomainService;
+import com.planOnRocks.domain.climbingRock.enums.TripCategory;
+import com.planOnRocks.domain.climbingRock.valueObjects.Distance;
+import com.planOnRocks.domain.climbingRock.valueObjects.Location;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,5 @@
-package com.planOnRocks.plugins.trip;
+package com.planOnRocks.plugins.trip.hibernate;
 
-import com.planOnRocks.domain.climbingRock.ClimbingRock;
 import com.planOnRocks.domain.trip.Trip;
 import com.planOnRocks.domain.trip.TripRepository;
 import org.springframework.beans.factory.annotation.Autowired;

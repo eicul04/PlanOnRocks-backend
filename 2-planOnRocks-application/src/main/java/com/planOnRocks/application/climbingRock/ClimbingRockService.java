@@ -2,14 +2,10 @@ package com.planOnRocks.application.climbingRock;
 
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
 import com.planOnRocks.domain.climbingRock.ClimbingRockRepository;
-import com.planOnRocks.domain.climbingRock.Location;
-import com.planOnRocks.domain.climbingRock.TripCategory;
-import com.planOnRocks.domain.trip.ParticipantExperience;
+import com.planOnRocks.domain.climbingRock.valueObjects.Location;
+import com.planOnRocks.domain.climbingRock.enums.TripCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class ClimbingRockService {

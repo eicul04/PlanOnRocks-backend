@@ -1,4 +1,4 @@
-package com.planOnRocks.plugins.trip;
+package com.planOnRocks.plugins.trip.hibernate;
 
 import com.planOnRocks.domain.trip.Trip;
 import org.springframework.data.jpa.repository.JpaRepository;

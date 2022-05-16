@@ -1,11 +1,11 @@
-package com.planOnRocks.plugins.climbingRock;
+package com.planOnRocks.plugins.climbingRock.rest;
 
 import com.planOnRocks.adapters.climbingRock.ClimbingRockMapper;
 import com.planOnRocks.adapters.climbingRock.ClimbingRockDTO;
 import com.planOnRocks.adapters.climbingRock.LocationMapper;
 import com.planOnRocks.application.climbingRock.ClimbingRockService;
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
-import com.planOnRocks.domain.climbingRock.TripCategory;
+import com.planOnRocks.domain.climbingRock.enums.TripCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

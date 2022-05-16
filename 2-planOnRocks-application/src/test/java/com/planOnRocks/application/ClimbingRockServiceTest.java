@@ -1,11 +1,11 @@
 package com.planOnRocks.application;
 
 import com.planOnRocks.application.climbingRock.ClimbingRockService;
-import com.planOnRocks.domain.climbingRock.Bolting;
+import com.planOnRocks.domain.climbingRock.enums.Bolting;
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
 import com.planOnRocks.domain.climbingRock.ClimbingRockRepository;
-import com.planOnRocks.domain.climbingRock.Difficulty;
-import com.planOnRocks.domain.climbingRock.Location;
+import com.planOnRocks.domain.climbingRock.enums.Difficulty;
+import com.planOnRocks.domain.climbingRock.valueObjects.Location;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

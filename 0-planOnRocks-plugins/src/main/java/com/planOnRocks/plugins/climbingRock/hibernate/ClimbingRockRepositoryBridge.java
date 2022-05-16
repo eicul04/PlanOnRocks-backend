@@ -1,4 +1,4 @@
-package com.planOnRocks.plugins.climbingRock;
+package com.planOnRocks.plugins.climbingRock.hibernate;
 
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
 import com.planOnRocks.domain.climbingRock.ClimbingRockRepository;

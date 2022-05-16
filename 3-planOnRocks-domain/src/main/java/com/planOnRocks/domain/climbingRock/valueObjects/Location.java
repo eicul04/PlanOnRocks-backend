@@ -1,4 +1,4 @@
-package com.planOnRocks.domain.climbingRock;
+package com.planOnRocks.domain.climbingRock.valueObjects;
 import java.io.Serializable;
 
 public final class Location implements Serializable {

@@ -1,4 +1,6 @@
-package com.planOnRocks.domain.climbingRock;
+package com.planOnRocks.domain.climbingRock.valueObjects;
+
+import com.planOnRocks.domain.climbingRock.enums.DistanceUnit;
 
 public final class Distance {
 

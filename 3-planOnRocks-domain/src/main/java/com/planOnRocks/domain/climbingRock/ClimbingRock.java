@@ -1,10 +1,11 @@
 package com.planOnRocks.domain.climbingRock;
 
-import com.planOnRocks.domain.trip.Trip;
+import com.planOnRocks.domain.climbingRock.enums.Bolting;
+import com.planOnRocks.domain.climbingRock.enums.Difficulty;
+import com.planOnRocks.domain.climbingRock.valueObjects.Location;
+import com.planOnRocks.domain.climbingRock.valueObjects.LocationConverter;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Table(name = "climbing_rock")
 @Entity

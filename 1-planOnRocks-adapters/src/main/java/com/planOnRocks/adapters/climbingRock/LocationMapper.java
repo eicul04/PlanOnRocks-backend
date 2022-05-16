@@ -1,6 +1,6 @@
 package com.planOnRocks.adapters.climbingRock;
 
-import com.planOnRocks.domain.climbingRock.Location;
+import com.planOnRocks.domain.climbingRock.valueObjects.Location;
 import org.springframework.stereotype.Component;
 
 import java.util.function.Function;

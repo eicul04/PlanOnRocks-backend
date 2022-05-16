@@ -1,7 +1,6 @@
 package com.planOnRocks.adapters.climbingRock;
 
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
-import com.planOnRocks.domain.climbingRock.Location;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
