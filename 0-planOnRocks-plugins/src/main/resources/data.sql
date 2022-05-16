@@ -1,3 +1,5 @@
+DROP TABLE climbing_rock;
+
 CREATE TABLE climbing_rock
 (
     location varchar(255) NOT NULL,
