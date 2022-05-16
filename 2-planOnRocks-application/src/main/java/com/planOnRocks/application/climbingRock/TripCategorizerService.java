@@ -1,17 +1,18 @@
-package com.planOnRocks.domain.climbingRock;
+package com.planOnRocks.application.climbingRock;
 
+import com.planOnRocks.domain.climbingRock.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TripCategorizer {
+public class TripCategorizerService implements TripCategorizerDomainService {
 
     @Autowired
-    public TripCategorizer(DistanceCalculator distanceCalculator) {
+    public TripCategorizerService(DistanceCalculatorService distanceCalculator) {
         this.distanceCalculator = distanceCalculator;
     }
 
-    private DistanceCalculator distanceCalculator;
+    private final DistanceCalculatorService distanceCalculator;
 
     public TripCategory categorizeClimbingRock(ClimbingRock climbingRock, Location userLocation) {
         Location climbingRockLocation = climbingRock.getClimbingRockLocation();
@@ -19,7 +20,7 @@ public class TripCategorizer {
         return getTripCategory(distance);
     }
 
-    private TripCategory getTripCategory(Distance distance) {
+    public TripCategory getTripCategory(Distance distance) {
         if(distance.getValue() < 50) {
             return TripCategory.HALF_DAY_TRIP;
         }
