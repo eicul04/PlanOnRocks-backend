@@ -1,6 +1,7 @@
 package com.planOnRocks.application.climbingRock;
 
 import com.planOnRocks.domain.climbingRock.*;
+import com.planOnRocks.domain.climbingRock.domainServices.ClimbingRockFilterDomainService;
 import com.planOnRocks.domain.trip.ParticipantExperience;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -12,9 +12,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDate;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
@@ -30,9 +27,9 @@ public class TripServiceTest {
     TripService tripService;
 
     private static final ParticipantExperience PARTICIPANT_EXPERIENCE = ParticipantExperience.BEGINNER;
-    private final TripCategory TRIP_CATEGORY = TripCategory.WEEKEND_TRIP;
-    private final Date START_DATE = new GregorianCalendar(2023, Calendar.MAY, 20).getTime();
-    private final Date END_DATE = new GregorianCalendar(2023, Calendar.MAY, 22).getTime();;
+    private final TripCategory TRIP_CATEGORY = TripCategory.DAY_TRIP;
+    private final LocalDate START_DATE = LocalDate.now();
+    private final LocalDate END_DATE = LocalDate.now();
 
     @Test
     void saveTrip() {
