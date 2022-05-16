@@ -18,7 +18,7 @@ public class DistanceCalculatorService implements DistanceCalculatorDomainServic
         return new Distance(distanceValue, DistanceUnit.KILOMETER);
     }
 
-    public double calculateDistance(double climbingRockLocationLatitude, double userLocationLatitude,
+    private double calculateDistance(double climbingRockLocationLatitude, double userLocationLatitude,
                                     double climbingRockLocationLongitude, double userLocationLongitude) {
         return 6378.388 * acos(sin(climbingRockLocationLatitude) * sin(userLocationLatitude) + cos(climbingRockLocationLatitude) * cos(userLocationLatitude) * cos(abs(userLocationLongitude - climbingRockLocationLongitude)));
     }

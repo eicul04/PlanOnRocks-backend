@@ -7,12 +7,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class TripCategorizerService implements TripCategorizerDomainService {
 
+    private final DistanceCalculatorService distanceCalculator;
+
     @Autowired
     public TripCategorizerService(DistanceCalculatorService distanceCalculator) {
         this.distanceCalculator = distanceCalculator;
     }
-
-    private final DistanceCalculatorService distanceCalculator;
 
     public TripCategory getTripCategory(ClimbingRock climbingRock, Location userLocation) {
         Location climbingRockLocation = climbingRock.getClimbingRockLocation();
@@ -20,7 +20,7 @@ public class TripCategorizerService implements TripCategorizerDomainService {
         return categorizeClimbingRock(distance);
     }
 
-    public TripCategory categorizeClimbingRock(Distance distance) {
+    private TripCategory categorizeClimbingRock(Distance distance) {
         if(distance.getValue() < 50) {
             return TripCategory.HALF_DAY_TRIP;
         }
