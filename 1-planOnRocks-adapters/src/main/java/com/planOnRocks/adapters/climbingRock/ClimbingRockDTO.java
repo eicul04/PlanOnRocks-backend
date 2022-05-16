@@ -5,10 +5,10 @@ import com.planOnRocks.domain.climbingRock.Difficulty;
 
 public class ClimbingRockDTO {
 
-    private String location;
-    private String name;
-    private Difficulty difficulty;
-    private Bolting bolting;
+    private final String location;
+    private final String name;
+    private final Difficulty difficulty;
+    private final Bolting bolting;
 
     public ClimbingRockDTO(String location, String name, Difficulty difficulty, Bolting bolting) {
         this.location = location;

@@ -36,11 +36,19 @@ public class Trip {
             inverseJoinColumns = @JoinColumn(name = "climbing_rock_id"))
     private List<ClimbingRock> climbingRocks = new ArrayList<>();
 
-    public Long getId() {
-        return id;
+    public Trip(Date startDate, Date endDate, ParticipantExperience participantExperience, TripCategory tripCategory, List<ClimbingRock> climbingRocks) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.participantExperience = participantExperience;
+        this.tripCategory = tripCategory;
+        this.climbingRocks = climbingRocks;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Trip() {
+
+    }
+
+    public List<ClimbingRock> getClimbingRocks() {
+        return climbingRocks;
     }
 }
