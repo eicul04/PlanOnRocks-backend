@@ -4,14 +4,15 @@ import com.planOnRocks.domain.climbingRock.Location;
 import com.planOnRocks.domain.climbingRock.TripCategory;
 import com.planOnRocks.domain.trip.ParticipantExperience;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class TripDTO {
 
     private final ParticipantExperience participantExperience;
     private final TripCategory tripCategory;
-    private final Date startDate;
-    private final Date endDate;
+    private final LocalDate startDate;
+    private final LocalDate endDate;
 
 
     public ParticipantExperience getParticipantExperience() {
@@ -22,15 +23,15 @@ public class TripDTO {
         return tripCategory;
     }
 
-    public Date getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
 
-    public Date getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
-    public TripDTO(ParticipantExperience participantExperience, TripCategory tripCategory, Date startDate, Date endDate) {
+    public TripDTO(ParticipantExperience participantExperience, TripCategory tripCategory, LocalDate startDate, LocalDate endDate) {
         this.participantExperience = participantExperience;
         this.tripCategory = tripCategory;
         this.startDate = startDate;

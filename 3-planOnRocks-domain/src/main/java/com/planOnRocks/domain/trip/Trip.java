@@ -2,6 +2,7 @@ package com.planOnRocks.domain.trip;
 import com.planOnRocks.domain.climbingRock.TripCategory;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -15,10 +16,10 @@ public class Trip {
     private Long id;
 
     @Column(name = "startDate")
-    private Date startDate;
+    private LocalDate startDate;
 
     @Column(name = "endDate")
-    private Date endDate;
+    private LocalDate endDate;
 
     @Column(name = "participantExperience")
     private ParticipantExperience participantExperience;
@@ -26,7 +27,7 @@ public class Trip {
     @Column(name = "tripCategory")
     private TripCategory tripCategory;
 
-    public Trip(Date startDate, Date endDate, ParticipantExperience participantExperience, TripCategory tripCategory) {
+    public Trip(LocalDate startDate, LocalDate endDate, ParticipantExperience participantExperience, TripCategory tripCategory) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.participantExperience = participantExperience;
@@ -37,11 +38,11 @@ public class Trip {
 
     }
 
-    public Date getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
 
-    public Date getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
