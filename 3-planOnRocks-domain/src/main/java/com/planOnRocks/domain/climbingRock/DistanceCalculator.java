@@ -1,7 +1,10 @@
 package com.planOnRocks.domain.climbingRock;
 
+import org.springframework.stereotype.Service;
+
 import static java.lang.Math.*;
 
+@Service
 public class DistanceCalculator {
 
     public Distance getDistance(Location climbingRockLocation, Location userLocation){
@@ -13,8 +16,6 @@ public class DistanceCalculator {
 
     private double calculateDistance(double climbingRockLocationLatitude, double userLocationLatitude,
                                        double climbingRockLocationLongitude, double userLocationLongitude) {
-        return 6378.388 * acos(sin(climbingRockLocationLatitude) * sin(userLocationLatitude) +
-                cos(climbingRockLocationLatitude) * cos(userLocationLatitude) * cos(abs(userLocationLongitude -
-                        climbingRockLocationLongitude)));
+        return 6378.388 * acos(sin(climbingRockLocationLatitude) * sin(userLocationLatitude) + cos(climbingRockLocationLatitude) * cos(userLocationLatitude) * cos(abs(userLocationLongitude - climbingRockLocationLongitude)));
     }
 }
