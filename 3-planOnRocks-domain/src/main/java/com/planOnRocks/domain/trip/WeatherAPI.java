@@ -6,5 +6,5 @@ import java.time.LocalDate;
 
 public interface WeatherAPI {
 
-    void getWeatherForDateAndLocation(LocalDate tripStart, Location location);
+    Weather getWeatherForDateAndLocation(LocalDate tripStart, Location location);
 }
