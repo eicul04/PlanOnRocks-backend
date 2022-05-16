@@ -8,6 +8,7 @@ import com.planOnRocks.application.trip.TripService;
 import com.planOnRocks.domain.climbingRock.ClimbingRock;
 import com.planOnRocks.domain.climbingRock.TripCategory;
 import com.planOnRocks.domain.trip.Trip;
+import com.planOnRocks.domain.trip.Weather;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,5 +37,10 @@ public class TripController {
     @GetMapping(value = "/", params = {"climbingRock", "userLocation"}, produces = "application/json;charset=UTF-8")
     public List<ClimbingRock> getTripDestinations(@RequestParam Long climbingRockId, @RequestParam String userLocation) {
         return tripService.getTripDestinations(climbingRockId, locationMapper.apply(userLocation));
+    }
+
+    @GetMapping(value = "/", params = {"tripId", "climbingRockId"}, produces = "application/json;charset=UTF-8")
+    public Weather getWeather(@RequestParam Long tripId, @RequestParam Long climbingRockId) {
+        return tripService.getWeather(tripId, climbingRockId);
     }
 }

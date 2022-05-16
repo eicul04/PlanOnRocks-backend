@@ -1,5 +1,5 @@
 package com.planOnRocks.domain.trip;
 
 public enum Weather {
-    SUN, CLOUD, RAIN, SNOW
+    SUN, CLOUD, RAIN, SNOW, NO_FORECAST
 }
