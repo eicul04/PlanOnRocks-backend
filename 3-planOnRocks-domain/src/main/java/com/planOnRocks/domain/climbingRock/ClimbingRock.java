@@ -1,12 +1,19 @@
 package com.planOnRocks.domain.climbingRock;
 
+import com.planOnRocks.domain.trip.Trip;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Table(name = "climbing_rock")
 @Entity
 public class ClimbingRock {
 
-    @EmbeddedId
+    @Id
+    @Convert(
+            converter = LocationConverter.class
+    )
     @Column(name = "location", nullable = false, unique = true)
     private Location climbingRockLocation;
 
@@ -18,6 +25,9 @@ public class ClimbingRock {
 
     @Column(name = "bolting")
     private Bolting bolting;
+
+    @ManyToMany(mappedBy = "climbingRocks", cascade = {CascadeType.PERSIST})
+    private List<Trip> trips = new ArrayList<>();
 
     //TODO put something in void constructor
     public ClimbingRock() {
