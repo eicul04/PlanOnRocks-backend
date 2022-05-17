@@ -10,9 +10,15 @@ public class StringToLocationMapper implements Function<String, Location> {
 
     private Location mapToLocation(String location) {
         String[] latlong = location.split(",");
-        double latitude = Double.parseDouble(latlong[0]);
-        double longitude = Double.parseDouble(latlong[1]);
-        return new Location(latitude, longitude);
+        return new Location(getLatitude(latlong), getLongitude(latlong));
+    }
+
+    private double getLongitude(String[] latlong) {
+        return Double.parseDouble(latlong[1]);
+    }
+
+    private double getLatitude(String[] latlong) {
+        return Double.parseDouble(latlong[0]);
     }
 
     @Override
